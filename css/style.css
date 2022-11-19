@@ -406,7 +406,7 @@ button {
     margin-bottom: 9px;
 }
 .footer-social {
-    margin-right: 93px;
+    margin-right: auto;
 }
 .footer-social-title {
     font-weight: 700;
@@ -492,6 +492,9 @@ button {
     margin-left: 10px;
     background-image: url(../icons/footer-send.svg);
     background-size: contain;
+}
+.footer-form-btn:hover, .footer-form-btn:focus {
+    animation: pulsate-bck 0.5s ease-in-out infinite both;
 }
 
 /* Styles for portfolio */
@@ -638,6 +641,9 @@ button {
 }
 .modal-icon {
     fill: var(--logo-color);
+    transition-property: fill;
+    transition-duration: var(--anim-duration);
+    transition-timing-function: var(--anim-timing-function);
 }
 .modal-btn:hover .modal-icon,
 .modal-btn:focus .modal-icon {
@@ -668,7 +674,6 @@ button {
 .modal-form-wrapper {
     position: relative;
     margin-bottom: 10px;
-    width: 100%;
 }
 .modal-form-field {
     width: 100%;
@@ -759,7 +764,22 @@ button {
 }
 .modal-form-btn {
     display: block;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
+    padding: 10px 52px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: var(--font-size-secondary);
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    background-color: var(--accent-color);
+    color: var(--secondary-title-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.modal-form-btn:hover, .modal-form-btn:focus {
+    animation: pulsate-bck 0.5s ease-in-out infinite both;
 }
 @keyframes scale-in-ver-top {
     0% {
